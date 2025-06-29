@@ -63,13 +63,13 @@ const About = () => {
           <div className="relative">
             <div className="aspect-square rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 p-1">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=face"
-                alt="Profile"
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=500&fit=crop&crop=face"
+                alt="Mardev Rahman Profile"
                 className="w-full h-full object-cover rounded-2xl"
               />
             </div>
             <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4 rounded-2xl">
-              <p className="font-semibold">5+ Years</p>
+              <p className="font-semibold">4+ Years</p>
               <p className="text-sm opacity-90">{t.about.experience}</p>
             </div>
           </div>

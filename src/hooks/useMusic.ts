@@ -10,7 +10,7 @@ const MUSIC_URLS = [
 
 export const useMusic = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [volume, setVolume] = useState(0.3);
+  const [volume, setVolume] = useState(0.2);
   const [currentTrack, setCurrentTrack] = useState(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -23,7 +23,7 @@ export const useMusic = () => {
     // Set initial track
     audioRef.current.src = MUSIC_URLS[currentTrack];
     
-    const savedMusicState = localStorage.getItem('portfolio-music');
+    const savedMusicState = localStorage.getItem('mardev-portfolio-music');
     if (savedMusicState === 'true') {
       setIsPlaying(true);
     }
@@ -77,11 +77,11 @@ export const useMusic = () => {
       if (isPlaying) {
         audioRef.current.pause();
         setIsPlaying(false);
-        localStorage.setItem('portfolio-music', 'false');
+        localStorage.setItem('mardev-portfolio-music', 'false');
       } else {
         await audioRef.current.play();
         setIsPlaying(true);
-        localStorage.setItem('portfolio-music', 'true');
+        localStorage.setItem('mardev-portfolio-music', 'true');
       }
     } catch (error) {
       console.warn('Audio playback failed:', error);

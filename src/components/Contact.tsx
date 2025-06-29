@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const Contact = () => {
@@ -40,19 +40,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "alex.johnson@email.com",
-      href: "mailto:alex.johnson@email.com"
+      value: "mardev.rahman@gmail.com",
+      href: "mailto:mardev.rahman@gmail.com"
     },
     {
-      icon: Phone,
-      title: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      icon: MessageCircle,
+      title: "WhatsApp",
+      value: "+62 812-3456-7890",
+      href: "https://wa.me/6281234567890"
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "San Francisco, CA",
+      value: "Jakarta, Indonesia",
       href: "#"
     }
   ];
