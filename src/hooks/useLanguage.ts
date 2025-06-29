@@ -48,14 +48,26 @@ export interface Translations {
   skills: {
     title: string;
     subtitle: string;
+    frontend: string;
+    backend: string;
+    design: string;
+    tools: string;
   };
   contact: {
     title: string;
     subtitle: string;
     name: string;
     email: string;
+    subject: string;
     message: string;
     send: string;
+    sending: string;
+    success: string;
+    letsConnect: string;
+    letsConnectDesc: string;
+    quickResponse: string;
+    quickResponseDesc: string;
+    footer: string;
   };
 }
 
@@ -71,7 +83,7 @@ const translations: Record<Language, Translations> = {
     hero: {
       greeting: 'Hai, saya',
       name: 'Alex Johnson',
-      roles: ['Full Stack Developer', 'UI/UX Designer', 'Problem Solver'],
+      roles: ['Full Stack Developer', 'UI/UX Designer', 'Pemecah Masalah'],
       description: 'Bersemangat dalam menciptakan pengalaman digital yang indah, fungsional, dan berpusat pada pengguna. Mari bangun sesuatu yang luar biasa bersama.',
       viewWork: 'Lihat Karya Saya',
       downloadCV: 'Unduh CV'
@@ -104,15 +116,27 @@ const translations: Record<Language, Translations> = {
     },
     skills: {
       title: 'Keahlian',
-      subtitle: 'Teknologi dan tools yang saya kuasai untuk menciptakan solusi digital yang luar biasa.'
+      subtitle: 'Teknologi dan tools yang saya kuasai untuk menciptakan solusi digital yang luar biasa.',
+      frontend: 'Pengembangan Frontend',
+      backend: 'Pengembangan Backend',
+      design: 'Desain & UI/UX',
+      tools: 'Tools & Teknologi'
     },
     contact: {
       title: 'Kontak',
       subtitle: 'Mari berkolaborasi! Hubungi saya untuk mendiskusikan proyek Anda atau sekadar menyapa.',
       name: 'Nama',
       email: 'Email',
+      subject: 'Subjek',
       message: 'Pesan',
-      send: 'Kirim Pesan'
+      send: 'Kirim Pesan',
+      sending: 'Mengirim...',
+      success: 'Terima kasih! Pesan Anda telah terkirim. Saya akan membalas segera.',
+      letsConnect: 'Mari Terhubung',
+      letsConnectDesc: 'Saya selalu tertarik mendengar tentang proyek dan peluang baru. Baik Anda perusahaan yang ingin merekrut, atau Anda memiliki proyek dalam pikiran, saya ingin mendengar dari Anda.',
+      quickResponse: 'Respon Cepat Terjamin',
+      quickResponseDesc: 'Saya biasanya merespon semua pertanyaan dalam 24 jam. Untuk hal-hal mendesak, silakan hubungi saya langsung.',
+      footer: '© 2024 Alex Johnson. Dibuat dengan ❤️ menggunakan React dan Tailwind CSS.'
     }
   },
   en: {
@@ -159,15 +183,27 @@ const translations: Record<Language, Translations> = {
     },
     skills: {
       title: 'Skills',
-      subtitle: 'Technologies and tools I use to create amazing digital solutions.'
+      subtitle: 'Technologies and tools I use to create amazing digital solutions.',
+      frontend: 'Frontend Development',
+      backend: 'Backend Development',
+      design: 'Design & UI/UX',
+      tools: 'Tools & Technologies'
     },
     contact: {
       title: 'Contact',
       subtitle: 'Let\'s collaborate! Get in touch to discuss your project or just say hello.',
       name: 'Name',
       email: 'Email',
+      subject: 'Subject',
       message: 'Message',
-      send: 'Send Message'
+      send: 'Send Message',
+      sending: 'Sending...',
+      success: 'Thank you! Your message has been sent successfully. I\'ll get back to you soon.',
+      letsConnect: 'Let\'s Connect',
+      letsConnectDesc: 'I\'m always interested in hearing about new projects and opportunities. Whether you\'re a company looking to hire, or you\'re someone who has a project in mind, I\'d love to hear from you.',
+      quickResponse: 'Quick Response Guaranteed',
+      quickResponseDesc: 'I typically respond to all inquiries within 24 hours. For urgent matters, feel free to call me directly.',
+      footer: '© 2024 Alex Johnson. Built with ❤️ using React and Tailwind CSS.'
     }
   },
   ja: {
@@ -214,15 +250,27 @@ const translations: Record<Language, Translations> = {
     },
     skills: {
       title: 'スキル',
-      subtitle: '素晴らしいデジタルソリューションを作成するために使用する技術とツール。'
+      subtitle: '素晴らしいデジタルソリューションを作成するために使用する技術とツール。',
+      frontend: 'フロントエンド開発',
+      backend: 'バックエンド開発',
+      design: 'デザイン & UI/UX',
+      tools: 'ツール & テクノロジー'
     },
     contact: {
       title: 'お問い合わせ',
       subtitle: 'コラボレーションしましょう！プロジェクトについて話し合うか、お気軽にご挨拶ください。',
       name: '名前',
       email: 'メール',
+      subject: '件名',
       message: 'メッセージ',
-      send: 'メッセージを送信'
+      send: 'メッセージを送信',
+      sending: '送信中...',
+      success: 'ありがとうございます！メッセージが正常に送信されました。すぐにご連絡いたします。',
+      letsConnect: 'つながりましょう',
+      letsConnectDesc: '新しいプロジェクトや機会について聞くことにいつも興味があります。雇用を検討している会社でも、プロジェクトのアイデアをお持ちの方でも、ぜひお聞かせください。',
+      quickResponse: '迅速な対応をお約束',
+      quickResponseDesc: '通常、すべてのお問い合わせに24時間以内に対応いたします。緊急の場合は、お気軽に直接お電話ください。',
+      footer: '© 2024 Alex Johnson. React と Tailwind CSS を使用して ❤️ で構築。'
     }
   }
 };

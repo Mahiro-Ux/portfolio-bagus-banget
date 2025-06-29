@@ -1,14 +1,15 @@
-
 import { useState } from "react";
 import { Code, Palette, Database, Globe, Smartphone, Zap } from "lucide-react";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const Skills = () => {
+  const { t } = useLanguage();
   const [activeCategory, setActiveCategory] = useState("frontend");
 
   const skillCategories = {
     frontend: {
       icon: Code,
-      title: "Frontend Development",
+      title: t.skills.frontend,
       skills: [
         { name: "React", level: 95 },
         { name: "TypeScript", level: 90 },
@@ -20,7 +21,7 @@ const Skills = () => {
     },
     backend: {
       icon: Database,
-      title: "Backend Development",
+      title: t.skills.backend,
       skills: [
         { name: "Node.js", level: 90 },
         { name: "Python", level: 85 },
@@ -32,7 +33,7 @@ const Skills = () => {
     },
     design: {
       icon: Palette,
-      title: "Design & UI/UX",
+      title: t.skills.design,
       skills: [
         { name: "Figma", level: 88 },
         { name: "Adobe XD", level: 82 },
@@ -44,7 +45,7 @@ const Skills = () => {
     },
     tools: {
       icon: Zap,
-      title: "Tools & Technologies",
+      title: t.skills.tools,
       skills: [
         { name: "Git", level: 95 },
         { name: "Docker", level: 82 },
@@ -63,11 +64,10 @@ const Skills = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Skills & <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Expertise</span>
+            {t.skills.title} & <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Expertise</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            A comprehensive overview of my technical skills and the tools I use to create 
-            exceptional digital experiences.
+            {t.skills.subtitle}
           </p>
         </div>
 
@@ -222,7 +222,7 @@ const Skills = () => {
         {/* Additional Info */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { icon: Globe, title: "5+ Years", subtitle: "Professional Experience" },
+            { icon: Globe, title: "5+ Years", subtitle: t.about.experience },
             { icon: Zap, title: "50+ Projects", subtitle: "Successfully Completed" },
             { icon: Smartphone, title: "100%", subtitle: "Client Satisfaction" }
           ].map((stat, index) => {
