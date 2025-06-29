@@ -1,27 +1,30 @@
 
 import { User, Heart, Lightbulb, Target } from "lucide-react";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const About = () => {
+  const { t } = useLanguage();
+  
   const features = [
     {
       icon: User,
-      title: "Who I Am",
-      description: "A passionate developer with 5+ years of experience creating digital solutions that make a difference."
+      title: t.about.whoIAm,
+      description: t.about.whoIAmDesc
     },
     {
       icon: Heart,
-      title: "What I Love",
-      description: "Clean code, beautiful design, and the satisfaction of solving complex problems with elegant solutions."
+      title: t.about.whatILove,
+      description: t.about.whatILoveDesc
     },
     {
       icon: Lightbulb,
-      title: "My Approach",
-      description: "I believe in user-centered design, continuous learning, and building applications that are both functional and delightful."
+      title: t.about.myApproach,
+      description: t.about.myApproachDesc
     },
     {
       icon: Target,
-      title: "My Goal",
-      description: "To create impactful digital experiences that help businesses grow and users achieve their objectives."
+      title: t.about.myGoal,
+      description: t.about.myGoalDesc
     }
   ];
 
@@ -30,36 +33,29 @@ const About = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            About <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Me</span>
+            {t.about.title} <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Me</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            I'm a creative developer who loves turning ideas into reality through code. 
-            With a strong background in both frontend and backend development, I create 
-            comprehensive solutions that deliver real value.
+            {t.about.subtitle}
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div className="space-y-6">
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-2xl font-semibold text-white mb-4">My Journey</h3>
+              <h3 className="text-2xl font-semibold text-white mb-4">{t.about.journey}</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Started as a curious student who fell in love with programming during my first 
-                "Hello World" moment. Since then, I've been on an incredible journey of continuous 
-                learning and growth in the tech industry.
+                {t.about.journeyText1}
               </p>
               <p className="text-gray-300 leading-relaxed">
-                I've had the privilege of working with startups and established companies, 
-                helping them bring their visions to life through innovative web solutions.
+                {t.about.journeyText2}
               </p>
             </div>
 
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
-              <h3 className="text-2xl font-semibold text-white mb-4">Beyond Code</h3>
+              <h3 className="text-2xl font-semibold text-white mb-4">{t.about.beyond}</h3>
               <p className="text-gray-300 leading-relaxed">
-                When I'm not coding, you'll find me exploring new technologies, contributing to 
-                open-source projects, or enjoying outdoor photography. I believe that diverse 
-                experiences make me a better developer and a more creative problem solver.
+                {t.about.beyondText}
               </p>
             </div>
           </div>
@@ -74,7 +70,7 @@ const About = () => {
             </div>
             <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4 rounded-2xl">
               <p className="font-semibold">5+ Years</p>
-              <p className="text-sm opacity-90">Experience</p>
+              <p className="text-sm opacity-90">{t.about.experience}</p>
             </div>
           </div>
         </div>

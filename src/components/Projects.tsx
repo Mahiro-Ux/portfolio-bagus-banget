@@ -1,7 +1,10 @@
 
 import { ExternalLink, Github, Eye } from "lucide-react";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const Projects = () => {
+  const { t } = useLanguage();
+  
   const projects = [
     {
       title: "E-Commerce Platform",
@@ -64,11 +67,10 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Featured <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Projects</span>
+            Featured <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">{t.projects.title}</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Here are some of my recent projects that showcase my skills and passion for creating 
-            exceptional digital experiences.
+            {t.projects.subtitle}
           </p>
         </div>
 
@@ -83,7 +85,7 @@ const Projects = () => {
               {project.featured && (
                 <div className="absolute top-4 left-4 z-10">
                   <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full font-medium">
-                    Featured
+                    {t.projects.featured}
                   </span>
                 </div>
               )}
@@ -146,14 +148,14 @@ const Projects = () => {
                     href={project.liveUrl}
                     className="flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200 text-sm font-medium"
                   >
-                    <span>Live Demo</span>
+                    <span>{t.projects.liveDemo}</span>
                     <ExternalLink size={16} />
                   </a>
                   <a
                     href={project.githubUrl}
                     className="flex items-center space-x-2 text-gray-400 hover:text-gray-300 transition-colors duration-200 text-sm font-medium"
                   >
-                    <span>Source</span>
+                    <span>{t.projects.source}</span>
                     <Github size={16} />
                   </a>
                 </div>
@@ -164,7 +166,7 @@ const Projects = () => {
 
         <div className="text-center mt-12">
           <button className="px-8 py-3 border border-gray-400 text-gray-300 rounded-full font-medium hover:bg-white hover:text-gray-900 transition-all duration-300">
-            View All Projects
+            {t.projects.viewAll}
           </button>
         </div>
       </div>

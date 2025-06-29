@@ -1,14 +1,15 @@
 
 import { useState, useEffect } from "react";
 import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const Hero = () => {
+  const { t } = useLanguage();
   const [displayText, setDisplayText] = useState("");
-  const roles = ["Full Stack Developer", "UI/UX Designer", "Problem Solver"];
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
 
   useEffect(() => {
-    const currentRole = roles[currentRoleIndex];
+    const currentRole = t.hero.roles[currentRoleIndex];
     let currentIndex = 0;
     const typingInterval = setInterval(() => {
       if (currentIndex <= currentRole.length) {
@@ -17,13 +18,13 @@ const Hero = () => {
       } else {
         clearInterval(typingInterval);
         setTimeout(() => {
-          setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
+          setCurrentRoleIndex((prev) => (prev + 1) % t.hero.roles.length);
         }, 2000);
       }
     }, 100);
 
     return () => clearInterval(typingInterval);
-  }, [currentRoleIndex]);
+  }, [currentRoleIndex, t.hero.roles]);
 
   const handleScrollToAbout = () => {
     document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" });
@@ -62,9 +63,9 @@ const Hero = () => {
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
           <div className="animate-fade-in">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6">
-              Hi, I'm{" "}
+              {t.hero.greeting}{" "}
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Alex Johnson
+                {t.hero.name}
               </span>
             </h1>
             
@@ -79,16 +80,15 @@ const Hero = () => {
             </div>
 
             <p className="text-lg sm:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Passionate about creating beautiful, functional, and user-centered digital experiences. 
-              Let's build something amazing together.
+              {t.hero.description}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
               <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-medium hover:shadow-lg hover:shadow-purple-500/25 transform hover:-translate-y-1 transition-all duration-300">
-                View My Work
+                {t.hero.viewWork}
               </button>
               <button className="px-8 py-3 border border-gray-400 text-gray-300 rounded-full font-medium hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Download CV
+                {t.hero.downloadCV}
               </button>
             </div>
 
