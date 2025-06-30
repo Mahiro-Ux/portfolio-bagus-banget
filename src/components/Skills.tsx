@@ -1,5 +1,6 @@
+
 import { useState } from "react";
-import { Code, Palette, Database, Globe, Smartphone, Zap } from "lucide-react";
+import { Code, Palette, Database, Zap } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const Skills = () => {
@@ -11,48 +12,48 @@ const Skills = () => {
       icon: Code,
       title: t.skills.frontend,
       skills: [
-        { name: "React", level: 95 },
-        { name: "TypeScript", level: 90 },
-        { name: "Next.js", level: 88 },
-        { name: "Vue.js", level: 85 },
-        { name: "Tailwind CSS", level: 92 },
-        { name: "JavaScript", level: 95 }
+        { name: "React.js", level: 90 },
+        { name: "Next.js", level: 85 },
+        { name: "TypeScript", level: 80 },
+        { name: "JavaScript", level: 95 },
+        { name: "Tailwind CSS", level: 90 },
+        { name: "Bootstrap 5", level: 88 }
       ]
     },
     backend: {
       icon: Database,
       title: t.skills.backend,
       skills: [
-        { name: "Node.js", level: 90 },
-        { name: "Python", level: 85 },
-        { name: "PostgreSQL", level: 88 },
-        { name: "MongoDB", level: 82 },
-        { name: "Express.js", level: 90 },
-        { name: "GraphQL", level: 78 }
+        { name: "Laravel", level: 85 },
+        { name: "PHP", level: 90 },
+        { name: "MySQL", level: 82 },
+        { name: "C#", level: 70 },
+        { name: "HTML & CSS", level: 95 },
+        { name: "Nginx", level: 65 }
       ]
     },
     design: {
       icon: Palette,
       title: t.skills.design,
       skills: [
-        { name: "Figma", level: 88 },
-        { name: "Adobe XD", level: 82 },
-        { name: "Photoshop", level: 85 },
-        { name: "UI Design", level: 90 },
-        { name: "UX Research", level: 80 },
-        { name: "Prototyping", level: 88 }
+        { name: "Figma", level: 90 },
+        { name: "Canva", level: 88 },
+        { name: "ShadCn", level: 80 },
+        { name: "UI Design", level: 85 },
+        { name: "UX Research", level: 75 },
+        { name: "Prototyping", level: 82 }
       ]
     },
     tools: {
       icon: Zap,
       title: t.skills.tools,
       skills: [
-        { name: "Git", level: 95 },
-        { name: "Docker", level: 82 },
-        { name: "AWS", level: 78 },
-        { name: "Webpack", level: 85 },
-        { name: "Jest", level: 88 },
-        { name: "CI/CD", level: 80 }
+        { name: "Git", level: 85 },
+        { name: "VS Code", level: 95 },
+        { name: "Docker", level: 70 },
+        { name: "Vercel", level: 80 },
+        { name: "ChatGPT 4.1", level: 90 },
+        { name: "Overflow", level: 75 }
       ]
     }
   };
@@ -217,26 +218,6 @@ const Skills = () => {
               })}
             </div>
           </div>
-        </div>
-
-        {/* Additional Info */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            { icon: Globe, title: "5+ Years", subtitle: t.about.experience },
-            { icon: Zap, title: "50+ Projects", subtitle: "Successfully Completed" },
-            { icon: Smartphone, title: "100%", subtitle: "Client Satisfaction" }
-          ].map((stat, index) => {
-            const Icon = stat.icon;
-            return (
-              <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30 text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Icon className="text-white" size={24} />
-                </div>
-                <h4 className="text-2xl font-bold text-white mb-1">{stat.title}</h4>
-                <p className="text-gray-400 text-sm">{stat.subtitle}</p>
-              </div>
-            );
-          })}
         </div>
       </div>
     </section>

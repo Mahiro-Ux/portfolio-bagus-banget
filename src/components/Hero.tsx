@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { ChevronDown, Github, Linkedin, Mail, MessageCircle } from "lucide-react";
+import { ChevronDown, Github, Instagram, Mail } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const Hero = () => {
@@ -95,7 +95,7 @@ const Hero = () => {
                 {t.hero.viewWork}
               </button>
               <a
-                href="/cv-mardev-rahman.pdf"
+                href="/cv-john.pdf"
                 download
                 className="px-8 py-3 border border-gray-400 text-gray-300 rounded-full font-medium hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
@@ -106,10 +106,9 @@ const Hero = () => {
             {/* Social Links */}
             <div className="flex justify-center space-x-6 mb-16">
               {[
-                { Icon: Github, href: "https://github.com/mardevrahman", label: "GitHub" },
-                { Icon: Linkedin, href: "https://linkedin.com/in/mardevrahman", label: "LinkedIn" },
-                { Icon: Mail, href: "mailto:mardev.rahman@gmail.com", label: "Email" },
-                { Icon: MessageCircle, href: "https://wa.me/6281234567890", label: "WhatsApp" },
+                { Icon: Github, href: "https://github.com/john", label: "GitHub" },
+                { Icon: Instagram, href: "https://instagram.com/john", label: "Instagram" },
+                { Icon: Mail, href: "mailto:John@gEzample.com", label: "Email" },
               ].map(({ Icon, href, label }) => (
                 <a
                   key={label}

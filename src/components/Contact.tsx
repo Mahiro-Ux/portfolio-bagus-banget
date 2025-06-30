@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle, MessageCircle } from "lucide-react";
+import { Mail, MessageCircle, MapPin, Send, CheckCircle, Github, Instagram } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const Contact = () => {
@@ -40,20 +40,20 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "mardev.rahman@gmail.com",
-      href: "mailto:mardev.rahman@gmail.com"
+      value: "John@gEzample.com",
+      href: "mailto:John@gEzample.com"
     },
     {
-      icon: MessageCircle,
-      title: "WhatsApp",
-      value: "+62 812-3456-7890",
-      href: "https://wa.me/6281234567890"
+      icon: Instagram,
+      title: "Instagram",
+      value: "@John",
+      href: "https://instagram.com/john"
     },
     {
-      icon: MapPin,
-      title: "Location",
-      value: "Jakarta, Indonesia",
-      href: "#"
+      icon: Github,
+      title: "GitHub",
+      value: "John",
+      href: "https://github.com/john"
     }
   ];
 
@@ -62,7 +62,7 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            {t.contact.title.split(' ')[0]} <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">{t.contact.title.split(' ')[1] || 'Touch'}</span>
+            Get In <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Touch</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             {t.contact.subtitle}

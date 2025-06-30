@@ -1,5 +1,5 @@
 
-import { User, Heart, Lightbulb, Target } from "lucide-react";
+import { User, Heart, Lightbulb, Target, Briefcase, GraduationCap } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const About = () => {
@@ -25,6 +25,36 @@ const About = () => {
       icon: Target,
       title: t.about.myGoal,
       description: t.about.myGoalDesc
+    }
+  ];
+
+  const experiences = [
+    {
+      company: "PT HUMMA TEKNOLOGI INDONESIA",
+      role: "Frontend Developer",
+      period: "2023 - Present",
+      type: "work"
+    },
+    {
+      company: "UI School (Self-Taught)",
+      role: "Frontend Developer & Backend",
+      period: "2024 - Present",
+      type: "education"
+    }
+  ];
+
+  const education = [
+    {
+      school: "SMK Al Azhar",
+      degree: "Vocational High School",
+      field: "Rekayasa Perangkat Lunak",
+      period: "2020 - 2023"
+    },
+    {
+      school: "UI School (Self-Taught)",
+      degree: "UI Programming",
+      field: "UI Development",
+      period: "2023 - Present"
     }
   ];
 
@@ -64,13 +94,49 @@ const About = () => {
             <div className="aspect-square rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 p-1">
               <img
                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=500&fit=crop&crop=face"
-                alt="Mardev Rahman Profile"
+                alt="John Profile"
                 className="w-full h-full object-cover rounded-2xl"
               />
             </div>
             <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4 rounded-2xl">
-              <p className="font-semibold">4+ Years</p>
+              <p className="font-semibold">2+ Years</p>
               <p className="text-sm opacity-90">{t.about.experience}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Experience & Education */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          <div className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/30">
+            <div className="flex items-center space-x-3 mb-6">
+              <Briefcase className="text-blue-400" size={24} />
+              <h3 className="text-2xl font-semibold text-white">Experience</h3>
+            </div>
+            <div className="space-y-4">
+              {experiences.map((exp, index) => (
+                <div key={index} className="border-l-2 border-blue-500/30 pl-4">
+                  <h4 className="text-white font-semibold">{exp.role}</h4>
+                  <p className="text-blue-400 text-sm">{exp.company}</p>
+                  <p className="text-gray-400 text-sm">{exp.period}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/30">
+            <div className="flex items-center space-x-3 mb-6">
+              <GraduationCap className="text-purple-400" size={24} />
+              <h3 className="text-2xl font-semibold text-white">Education</h3>
+            </div>
+            <div className="space-y-4">
+              {education.map((edu, index) => (
+                <div key={index} className="border-l-2 border-purple-500/30 pl-4">
+                  <h4 className="text-white font-semibold">{edu.degree}</h4>
+                  <p className="text-purple-400 text-sm">{edu.school}</p>
+                  <p className="text-gray-300 text-sm">{edu.field}</p>
+                  <p className="text-gray-400 text-sm">{edu.period}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

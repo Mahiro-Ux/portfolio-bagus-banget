@@ -7,55 +7,64 @@ const Projects = () => {
   
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, and real-time inventory tracking.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
+      title: "StarLaWeb",
+      description: "The social media website that we manage is the same as other social media with a protection system.",
+      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop",
+      technologies: ["PHP Native", "Bootstrap 5", "Tailwind", "Stisla Admin"],
       liveUrl: "#",
       githubUrl: "#",
       featured: true
     },
     {
-      title: "Task Management App",
-      description: "Collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
+      title: "NihonFlixe",
+      description: "Website Bioskop Non Template. Kami membuat ini dengan Laravel 11 Dan Gunakan Laravel UI Bootstrap & CSS",
+      image: "https://images.unsplash.com/photo-1489599997373-4637c540ceab?w=600&h=400&fit=crop",
+      technologies: ["Laravel", "Bootstrap", "Tailwind", "jQuery"],
+      liveUrl: "#",
+      githubUrl: "#",
+      featured: true
+    },
+    {
+      title: "StarMar",
+      description: "Website media sosial yang merupakan gabungan konsep dari Facebook dan Instagram. Proyek ini menampilkan beberapa komponen serupa, seperti timeline, fitur berbagi status, unggah foto, dan komentar.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      technologies: ["Vue.js", "Firebase", "Vuetify", "Socket.io"],
+      technologies: ["Laravel", "Bootstrap"],
       liveUrl: "#",
       githubUrl: "#",
       featured: false
     },
     {
-      title: "Weather Dashboard",
-      description: "Beautiful weather application with location-based forecasts, interactive maps, and historical weather data visualization.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
-      technologies: ["React", "Chart.js", "OpenWeather API", "CSS3"],
+      title: "S-market",
+      description: "Website untuk master data yang diperlukan aplikasi sekolah",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+      technologies: ["HTML & CSS"],
       liveUrl: "#",
       githubUrl: "#",
       featured: false
     },
     {
-      title: "Portfolio Website",
-      description: "Responsive portfolio website with modern design, smooth animations, and optimized performance. Built with accessibility in mind.",
+      title: "Online Shop",
+      description: "Website Penjualan Makanan basis PHP native",
+      image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=600&h=400&fit=crop",
+      technologies: ["PHP Native", "Stisla"],
+      liveUrl: "#",
+      githubUrl: "#",
+      featured: false
+    },
+    {
+      title: "Portfolio",
+      description: "My personal portfolio website",
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
-      technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
+      technologies: ["HTML & CSS"],
       liveUrl: "#",
       githubUrl: "#",
       featured: false
     },
     {
-      title: "AI Chat Application",
-      description: "Real-time chat application with AI integration, natural language processing, and smart response suggestions.",
-      image: "https://images.unsplash.com/photo-1587560699334-cc4ff634909a?w=600&h=400&fit=crop",
-      technologies: ["Next.js", "OpenAI API", "WebSocket", "PostgreSQL"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: true
-    },
-    {
-      title: "Data Visualization Tool",
-      description: "Interactive dashboard for data analysis with customizable charts, real-time updates, and export capabilities.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      technologies: ["D3.js", "React", "Python", "Flask", "PostgreSQL"],
+      title: "Aplikasi Laundry Beta",
+      description: "Aplikasi untuk layanan laundry dalam versi Beta",
+      image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=400&fit=crop",
+      technologies: ["PHP", "Bootstrap"],
       liveUrl: "#",
       githubUrl: "#",
       featured: false
@@ -67,7 +76,7 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Featured <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">{t.projects.title}</span>
+            Latest <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">{t.projects.title}</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             {t.projects.subtitle}
