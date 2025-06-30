@@ -34,6 +34,15 @@ const Projects = () => {
       featured: false
     },
     {
+      title: "Restoran",
+      description: "Website sistem manajemen restoran dengan fitur pemesanan online dan manajemen menu",
+      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
+      technologies: ["PHP Native", "Stisla"],
+      liveUrl: "#",
+      githubUrl: "#",
+      featured: false
+    },
+    {
       title: "S-market",
       description: "Website untuk master data yang diperlukan aplikasi sekolah",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
@@ -43,28 +52,10 @@ const Projects = () => {
       featured: false
     },
     {
-      title: "Online Shop",
-      description: "Website Penjualan Makanan basis PHP native",
-      image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=600&h=400&fit=crop",
-      technologies: ["PHP Native", "Stisla"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false
-    },
-    {
       title: "Portfolio",
       description: "My personal portfolio website",
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
       technologies: ["HTML & CSS"],
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false
-    },
-    {
-      title: "Aplikasi Laundry Beta",
-      description: "Aplikasi untuk layanan laundry dalam versi Beta",
-      image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=400&fit=crop",
-      technologies: ["PHP", "Bootstrap"],
       liveUrl: "#",
       githubUrl: "#",
       featured: false
