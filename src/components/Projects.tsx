@@ -9,7 +9,7 @@ const Projects = () => {
     {
       title: "StarLaWeb",
       description: "The social media website that we manage is the same as other social media with a protection system.",
-      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop",
+      image: "/lovable-uploads/9f51a7e7-3f8b-4a4b-9c2d-8e7f6a5b4c3d.png",
       technologies: ["PHP Native", "Bootstrap 5", "Tailwind", "Stisla Admin"],
       liveUrl: "#",
       githubUrl: "#",
@@ -18,7 +18,7 @@ const Projects = () => {
     {
       title: "NihonFlixe",
       description: "Website Bioskop Non Template. Kami membuat ini dengan Laravel 11 Dan Gunakan Laravel UI Bootstrap & CSS",
-      image: "https://images.unsplash.com/photo-1489599997373-4637c540ceab?w=600&h=400&fit=crop",
+      image: "/lovable-uploads/1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6.png",
       technologies: ["Laravel", "Bootstrap", "Tailwind", "jQuery"],
       liveUrl: "#",
       githubUrl: "#",
@@ -27,7 +27,7 @@ const Projects = () => {
     {
       title: "StarMar",
       description: "Website media sosial yang merupakan gabungan konsep dari Facebook dan Instagram. Proyek ini menampilkan beberapa komponen serupa, seperti timeline, fitur berbagi status, unggah foto, dan komentar.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
+      image: "/lovable-uploads/a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p6.png",
       technologies: ["Laravel", "Bootstrap"],
       liveUrl: "#",
       githubUrl: "#",
@@ -36,7 +36,7 @@ const Projects = () => {
     {
       title: "Restoran",
       description: "Website sistem manajemen restoran dengan fitur pemesanan online dan manajemen menu",
-      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
+      image: "/lovable-uploads/2b3c4d5e-6f7g-8h9i-0j1k-l2m3n4o5p6q7.png",
       technologies: ["PHP Native", "Stisla"],
       liveUrl: "#",
       githubUrl: "#",
@@ -54,7 +54,7 @@ const Projects = () => {
     {
       title: "Portfolio",
       description: "My personal portfolio website",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
+      image: "/lovable-uploads/3c4d5e6f-7g8h-9i0j-1k2l-m3n4o5p6q7r8.png",
       technologies: ["HTML & CSS"],
       liveUrl: "#",
       githubUrl: "#",
