@@ -95,6 +95,11 @@ const AppUpload = () => {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   };
 
+  const handleButtonClick = () => {
+    console.log("Button clicked, file input ref:", fileInputRef.current);
+    fileInputRef.current?.click();
+  };
+
   return (
     <div className="space-y-8">
       {/* Upload Area */}
@@ -126,7 +131,7 @@ const AppUpload = () => {
             </p>
             <Button
               variant="outline"
-              onClick={() => fileInputRef.current?.click()}
+              onClick={handleButtonClick}
               className="border-gray-400 text-gray-300 hover:bg-white hover:text-gray-900"
             >
               Pilih File
