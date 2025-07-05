@@ -1,5 +1,7 @@
 
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Upload } from "lucide-react";
 import FileUploadArea from "./upload/FileUploadArea";
 import UploadedFileCard from "./upload/UploadedFileCard";
 import { UploadedFile } from "./upload/types";
@@ -55,6 +57,13 @@ const AppUpload = () => {
     setUploadedFiles(prev => prev.filter((_, i) => i !== index));
   };
 
+  const handleUpload = () => {
+    console.log("Uploading files:", uploadedFiles);
+    // Here you would normally send the files to your server
+    // For now, just show a success message
+    alert("Files uploaded successfully!");
+  };
+
   return (
     <div className="space-y-8">
       <FileUploadArea
@@ -79,6 +88,17 @@ const AppUpload = () => {
               onRemoveFile={removeFile}
             />
           ))}
+
+          <div className="flex justify-end pt-4">
+            <Button 
+              onClick={handleUpload}
+              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-medium px-8 py-3"
+              disabled={uploadedFiles.some(file => !file.name || !file.publisher)}
+            >
+              <Upload className="w-4 h-4 mr-2" />
+              Upload Aplikasi
+            </Button>
+          </div>
         </div>
       )}
     </div>

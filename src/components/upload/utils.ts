@@ -15,7 +15,7 @@ export const simulateUpload = (
   setUploadProgress(0);
   
   const interval = setInterval(() => {
-    setUploadProgress(prev => {
+    setUploadProgress((prev: number) => {
       if (prev >= 100) {
         clearInterval(interval);
         setUploading(false);
