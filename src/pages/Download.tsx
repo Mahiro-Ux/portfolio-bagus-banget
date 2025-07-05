@@ -1,9 +1,9 @@
-
 import { Download as DownloadIcon, Star, Users, Calendar, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import Navigation from "@/components/Navigation";
+import AppUpload from "@/components/AppUpload";
 import { useState } from "react";
 
 const Download = () => {
@@ -86,6 +86,11 @@ const Download = () => {
             <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
               Unduh aplikasi mobile terbaru yang telah saya kembangkan. Tersedia untuk Android dan iOS.
             </p>
+          </div>
+
+          {/* Upload Section */}
+          <div className="mb-16">
+            <AppUpload />
           </div>
 
           {/* Apps Grid */}
