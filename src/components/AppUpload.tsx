@@ -12,6 +12,7 @@ interface UploadedFile {
   name: string;
   description: string;
   category: string;
+  publisher: string;
   preview?: string;
 }
 
@@ -28,6 +29,7 @@ const AppUpload = () => {
       name: file.name.replace(/\.[^/.]+$/, ""), // Remove extension
       description: "",
       category: "Aplikasi",
+      publisher: "",
       preview: file.type.startsWith('image/') ? URL.createObjectURL(file) : undefined
     }));
     
@@ -200,7 +202,7 @@ const AppUpload = () => {
                   </Button>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                   <div>
                     <Label htmlFor={`name-${index}`} className="text-gray-300">Nama Aplikasi</Label>
                     <Input
@@ -209,6 +211,16 @@ const AppUpload = () => {
                       onChange={(e) => updateFileInfo(index, 'name', e.target.value)}
                       className="bg-slate-700 border-slate-600 text-white"
                       placeholder="Masukkan nama aplikasi"
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor={`publisher-${index}`} className="text-gray-300">Nama Publisher</Label>
+                    <Input
+                      id={`publisher-${index}`}
+                      value={uploadedFile.publisher}
+                      onChange={(e) => updateFileInfo(index, 'publisher', e.target.value)}
+                      className="bg-slate-700 border-slate-600 text-white"
+                      placeholder="Nama developer/publisher"
                     />
                   </div>
                   <div>
